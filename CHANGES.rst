@@ -24,6 +24,13 @@ Fixes:
   if it is not necessary or intented.
   If the request returns a browsers view which just contains a html snippet (widget code, ESI output) without HTML doctype and html root element or body element it will be wrapped.
   Such request should mark the request with IDisableCSRFProtection.
+#- modify ProtectTransform.transformIterable (auto.py) to disable transform
+#  explicite if request has a IDisableCSRFProtection MarkerInterface. [loechel]
+#
+#  Reason: transform / parseTree modifies result html / DOM on all requests even
+#  if it is not necessary or intented.
+#  If the request returns a browsers view which just contains a html snippet (widget code, ESI output) without HTML doctype and html root element or body element it will be wrapped.
+#  Such request should mark the request with IDisableCSRFProtection.
 - apply code conventions. [loechel]
 - *add item here*
 
